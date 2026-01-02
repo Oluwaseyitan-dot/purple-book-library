@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purple Pages - My Book Library</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Patrick+Hand&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="books.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-book"></i> Purple Pages</h1>
+        <p class="tagline">My Personal Book Library</p>
+        <p>Keep track of all your books, categorize them, and record borrowing history!</p>
+    </header>
+    
+    <div class="container">
+        <aside class="sidebar">
+            <div class="section-title">
+                <i class="fas fa-search"></i>
+                <h2>Search Books</h2>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search by title or author...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="section-title">
+                <i class="fas fa-tags"></i>
+                <h2>Categories</h2>
+            </div>
+            <ul class="category-list" id="categoryList">
+                <li class="active" data-category="all">All Books</li>
+                <li data-category="fiction">Fiction</li>
+                <li data-category="fantasy">Fantasy</li>
+                <li data-category="mystery">Mystery</li>
+                <li data-category="science">Science</li>
+                <li data-category="biography">Biography</li>
+                <li data-category="children">Children's</li>
+            </ul>
+            
+            <div class="section-title">
+                <i class="fas fa-chart-bar"></i>
+                <h2>Library Stats</h2>
+            </div>
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-value" id="totalBooks">12</div>
+                    <div class="stat-label">Total Books</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="availableBooks">8</div>
+                    <div class="stat-label">Available</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="borrowedBooks">4</div>
+                    <div class="stat-label">Borrowed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="categoriesCount">6</div>
+                    <div class="stat-label">Categories</div>
+                </div>
+            </div>
+        </aside>
+        
+        <main class="main-content">
+            <div class="section-title">
+                <i class="fas fa-book-open"></i>
+                <h2>My Book Collection</h2>
+            </div>
+            <div id="bookList">
+                <!-- Books will be dynamically added here -->
+            </div>
+            
+            <div class="section-title">
+                <i class="fas fa-history"></i>
+                <h2>Borrowing History</h2>
+            </div>
+            <div id="borrowingHistory">
+                <!-- History items will be dynamically added here -->
+            </div>
+        </main>
+    </div>
+    
+    <footer>
+        <p>Made with <i class="fas fa-heart" style="color: #ff6b8b;"></i> for book lovers everywhere</p>
+        <p>Purple Pages &copy; <span id="currentYear"></span></p>
+    </footer>
+
+    <script src="books.js"></script>
+</body>
+</html>
